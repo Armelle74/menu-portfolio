@@ -1,0 +1,38 @@
+.menu-desktop {
+    @include  center;
+    @media (min-width: $small) {
+        @include  space-between;
+    }
+    &--logo {
+        width: 250px;
+        @include  center;
+        height: 100%;
+        &__image {
+            width: 100%;
+            &.logo--small {
+                @media (min-width: $small) {
+                    display: none;
+                } 
+            }
+            &.logo--desktop {
+                @media (max-width: $small) {
+                    display: none;
+                } 
+            }
+        }
+    }
+    &--list {
+        @include space-between;
+        @media (max-width: $small) {
+            display: none;
+        }
+        &__link {
+            padding: 0 0 0 2rem;
+            font-size: 2rem;
+            a {
+                position:relative;
+                color: #000;
+              }
+        }
+    }
+}

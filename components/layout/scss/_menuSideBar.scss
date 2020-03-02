@@ -1,0 +1,87 @@
+.sidebar {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  height: 5rem;
+  width: 5rem;
+  display: block;
+  border-radius: 50%;
+  &--panel {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 4px;
+    width: 4px;
+    height: 100%;
+    width: 100%;
+    display: block;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 25rem 0;
+    @include show;
+    z-index: 2;
+    &__menu {
+      font-size: 3rem;
+      margin: 0 auto;
+      text-align: center;
+      &__list {
+        &__link {
+          padding: 1rem 0;
+          a {
+            position:relative;
+            color: #FFF;
+            transition: color .5s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+  .show-leave-active {
+    transition: visibility 0, opacity .3s;
+    transition-delay: .65s;
+  }
+  .show-enter-active {
+    transition: visibility 0, opacity .3s;
+    transition-delay: .5s;
+  }
+  .show-enter-to,
+  .show-leave {
+    @include show;
+  }
+  .show-enter,
+  .show-leave-to {
+    @include hide;
+  }
+  &--overlay {
+    position: fixed;
+    top: -55%;
+    left: -120%;
+    height: 100rem;
+    width: 100rem;
+    transform-origin: center;
+    border-radius: 50%;
+    background-color: $primary-color;
+    transform: scale(2);
+    z-index: 1;
+  }
+}
+.zoom-leave-active {
+  transition: transform 0.8s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.zoom-enter-active {
+  transition: transform 0.7s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.zoom-enter,
+.zoom-leave-to {
+  top: -55%;
+  left: -120%;
+  transform: scale(0);
+}
+.zoom-enter-to,
+.zoom-leave {
+  top: -55%;
+  left: -120%;
+  height: 100rem;
+  width: 100rem;
+  transform: scale(2);
+}

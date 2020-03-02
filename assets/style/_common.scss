@@ -1,0 +1,67 @@
+@import 'normalize-scss';
+@include normalize();
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Archivo+Black&display=swap');
+@import 'variables.scss';
+html, body {
+    width : 100%;
+    height: 100%;
+}
+html {
+    font-size: 10px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    letter-spacing: .2rem;
+}
+body {
+    font-size: 1.6rem;
+    margin: 0;
+    padding: 0;
+    background: $secondary-color;
+    // background: no-repeat linear-gradient(235deg, rgba($tertiary-color,.2) 0%, rgba($secondary-color,.5) 100%);
+}
+section {
+    padding: 2rem 4rem;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+
+input {
+	outline: none;
+	border: none;
+}
+
+textarea {
+  outline: none;
+  border: none;
+}
+
+textarea:focus, input:focus {
+  border-color: transparent !important;
+}
+
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; }
+input:focus::-moz-placeholder { color:transparent; }
+input:focus:-ms-input-placeholder { color:transparent; }
+
+textarea:focus::-webkit-input-placeholder { color:transparent; }
+textarea:focus:-moz-placeholder { color:transparent; }
+textarea:focus::-moz-placeholder { color:transparent; }
+textarea:focus:-ms-input-placeholder { color:transparent; }
+
+input::-webkit-input-placeholder { color: #999999; }
+input:-moz-placeholder { color: #999999; }
+input::-moz-placeholder { color: #999999; }
+input:-ms-input-placeholder { color: #999999; }
+
+textarea::-webkit-input-placeholder { color: #999999; }
+textarea:-moz-placeholder { color: #999999; }
+textarea::-moz-placeholder { color: #999999; }
+textarea:-ms-input-placeholder { color: #999999; }

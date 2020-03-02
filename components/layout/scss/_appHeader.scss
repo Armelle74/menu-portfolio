@@ -1,0 +1,8 @@
+.header {
+    // background-color: #1B0240;
+    position: relative;
+    padding: 2rem;
+    @media (min-width: $medium) {
+        padding: 2rem 4rem;
+    } 
+}

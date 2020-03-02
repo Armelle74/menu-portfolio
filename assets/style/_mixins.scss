@@ -1,0 +1,31 @@
+ @mixin center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+@mixin align-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+@mixin column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@mixin space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin hide {
+  visibility: hidden;
+  opacity: 0;
+}
+@mixin show {
+  visibility: visible;
+  opacity: 1;
+}
